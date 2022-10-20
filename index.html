@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./meyer_reset.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Sign-Up Form</title>
+</head>
+<body>
+  <main>
+    <div class="side-hero">
+      <div class="logo-container">
+        <img src="./images/logo.png" alt="The Odin Project logo">
+        <p>ODIN</p>
+      </div>
+    </div>
+    <div class="form-side">
+      <div class="greetings">
+        <p>
+          This is not a real online service! You know you need something
+          like this in your life to help you realize your deepest dreams.
+          Sign up <em>now</em> to get started.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <form>
+        <h1>Let's do this!</h1>
+        <div class="form-line">
+          <div class="input-container">
+            <label for="fname">FIRST NAME</label>
+            <input type="text" name="fname" id="fname">
+          </div>
+          <div class="input-container">
+            <label for="lname">LAST NAME</label>
+            <input type="text" name="lname" id="lname">
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="input-container">
+            <label for="email">EMAIL</label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="input-container">
+            <label for="phone">PHONE NUMBER</label>
+            <input type="tel" name="phone" id="phone">
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="input-container">
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" id="password">
+          </div>
+          <div class="input-container">
+            <label for="conf_password">CONFIRM PASSWORD</label>
+            <input type="password" name="conf_password" id="conf_password">
+          </div>
+        </div>
+      </form>
+      <div class="footer">
+        <button type="submit">Create Account</button>
+        <p>Already have an account? <a href="#">Log in</a></p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
