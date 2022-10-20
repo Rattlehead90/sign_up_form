@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap');
+
+:root {
+  --background-gray: #f9fafc;
+  --credit-gray: hsla(220, 13%, 91%, 0.3);
+  --logo-container-black: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.side-hero {
+  background-image: url(./images/castle.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: clamp(320px, 33vw, 500px);
+  padding-bottom: 40px;
+}
+
+.credit {
+  color: var(--credit-gray);
+}
+
+.credit > a {
+  color: inherit;
+}
+
+.logo-container {
+  background-color: var(--logo-container-black);
+  position: relative;
+  top: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 160px;
+  overflow: hidden;
+  width: 100%;
+  color: var(--background-gray);
+}
+
+img + p {
+  font-size: 72px;
+  font-weight: bold;
+}
+
+.form-side {
+  background-color: var(--background-gray);
+}
+
+img {
+  width: 80px;
+}
