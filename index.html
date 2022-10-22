@@ -22,46 +22,78 @@
       <div class="greetings">
         <p>
           This is not a real online service! You know you need something
-          like this in your life to help you realize your deepest dreams.
-          Sign up <em>now</em> to get started.
+          like this in your life to help you realize your deepest dreams. <br>Sign up <em>now</em> to get started.
         </p>
         <p>You <em>know</em> you want to.</p>
       </div>
-      <form>
+      <form id="sign-up">
         <h1>Let's do this!</h1>
         <div class="form-line">
           <div class="input-container">
             <label for="fname">FIRST NAME</label>
-            <input type="text" name="fname" id="fname">
+            <input 
+              type="text" 
+              name="fname" 
+              id="fname" 
+              placeholder=' ' 
+              required>
           </div>
           <div class="input-container">
             <label for="lname">LAST NAME</label>
-            <input type="text" name="lname" id="lname">
+            <input 
+              type="text" 
+              name="lname" 
+              id="lname" 
+              placeholder=' ' 
+              required>
           </div>
         </div>
         <div class="form-line">
           <div class="input-container">
             <label for="email">EMAIL</label>
-            <input type="email" name="email" id="email">
+            <input 
+              type="email" 
+              name="email" 
+              id="email" 
+              placeholder=' ' 
+              required>
           </div>
           <div class="input-container">
             <label for="phone">PHONE NUMBER</label>
-            <input type="tel" name="phone" id="phone">
+            <input 
+              type="tel" 
+              name="phone" 
+              id="phone" 
+              placeholder=' ' 
+              pattern="^(\+420)? ?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{3}
+              $"
+              title="Enter the phone number in the requested format: +420********* or *********"
+              required>
           </div>
         </div>
         <div class="form-line">
           <div class="input-container">
             <label for="password">PASSWORD</label>
-            <input type="password" name="password" id="password">
+            <input 
+              type="password" 
+              name="password" 
+              id="password" 
+              placeholder=' ' 
+              required>
           </div>
           <div class="input-container">
             <label for="conf_password">CONFIRM PASSWORD</label>
-            <input type="password" name="conf_password" id="conf_password">
+            <input 
+              type="password" 
+              name="conf_password" 
+              id="conf_password" 
+              placeholder=' ' 
+              required>
           </div>
         </div>
       </form>
       <div class="footer">
-        <button type="submit">Create Account</button>
+        <button type="submit" form="sign-up">Create Account</button>
         <p>Already have an account? <a href="#">Log in</a></p>
       </div>
     </div>
