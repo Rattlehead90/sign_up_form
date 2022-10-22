@@ -45,6 +45,7 @@ main {
   justify-content: space-between;
   width: clamp(320px, 33vw, 600px);
   padding-bottom: 40px;
+  height: 100%;
 }
 
 .credit {
@@ -107,7 +108,7 @@ em {
 form {
   background-color: white;
   width: 100%;
-  height: 350px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -304,6 +305,20 @@ body {
   }
 
   .form-line {
-    margin-top: 5px;
+    flex-direction: column;
+  }
+
+  .side-hero {
+    width: 100%;
+  }
+
+  .credit {
+    font-size: 0.5em;
+    position: relative;
+    top: 10px;
+    color: rgba(255, 255, 255, 0.637);
+  }
+  main {
+    flex-direction: column;
   }
 }
