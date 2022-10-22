@@ -11,7 +11,11 @@
   --input-valid-green: rgb(34, 138, 34);
   --input-valid-green-bg: rgba(103, 161, 103, 0.089);
   --input-invalid-bg: rgba(189, 56, 56, 0.212);
+  --input-error-message: rgba(180, 86, 86, 0.897);
+  --button-green: rgb(92, 114, 85);
 }
+
+/* General Layout */
 
 * {
   outline: none;
@@ -91,16 +95,20 @@ img {
 .greetings {
   font-size: 1.5rem;
   line-height: 1.4em;
+  word-wrap: break-word;
 }
 
 .greetings > p {
   margin: 30px;
+  margin-right: max(1px, 40vw);
 }
 
 em {
   font-weight: bold;
   margin: 5px;
 }
+
+/* Form */
 
 form {
   background-color: white;
@@ -120,7 +128,7 @@ h1 {
   width: 100%;
   text-align: left;
   padding-left: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .form-line {
@@ -146,7 +154,7 @@ label {
 }
 
 input {
-  width: 300px;
+  width: 270px;
   border: 1px solid var(--input-invalid-border);
   background-color: var(--input-invalid-bg);
   border-radius: 4px;
@@ -170,13 +178,94 @@ input:placeholder-shown {
   background-color: white;
 }
 
-input:valid {
+
+input[type='text']:valid,
+input[type='tel']:valid,
+input[type='email']:valid {
   border: 1px solid var(--input-valid-green);
   background-color: var(--input-valid-green-bg);
 }
 
+/* Email Error Span */
+
+input[type='email']:placeholder-shown + span {
+  visibility: hidden;
+}
+
+input[type='email']:invalid + span::before {
+  content: '*Email doesn\'t look right';
+  position: absolute;
+  color: var(--input-error-message);
+  margin-top: 3px;
+  font-size: 0.7rem;
+}
+
+/* Mail Error Span */
+input[type='tel']:placeholder-shown + span {
+  visibility: hidden;
+}
+
+input[type='tel']:invalid + span::before {
+  content: '*Enter the number according to Czech format';
+  position: absolute;
+  color: var(--input-error-message);
+  margin-top: 3px;
+  font-size: 0.7rem;
+}
+
+/* Password Validation */
+input[type='password'] {
+  border-color: var(--input-border-gray);
+  background-color: white;
+}
+
+#password.matching_passwords,
+#conf_password.matching_passwords {
+  border-color: var(--input-valid-green);
+  background-color: var(--input-valid-green-bg);
+}
+
+#password.no_match,
+#conf_password.no_match {
+  border-color: var(--input-invalid-border);
+  background-color: var(--input-invalid-bg);
+}
+
+#conf_password.no_match + span::before {
+  position: absolute;
+  content: '*Passwords do not match';
+  color: var(--input-error-message);
+  font-size: 0.7rem;
+}
+
+/* Footer and Button */
+button {
+  margin-left: 30px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 9px;  
+  background-color: var(--button-green);
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 5px;
+  box-shadow: 2px 3px 4px -1px rgba(0, 0, 0, 0.281);
+}
+
+button + p {
+  margin: 30px 30px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+p a {
+  color: var(--button-green);
+  font-weight: 500;
+}
+
 @media only screen and (max-width: 700px) {
   input {
-    width: auto
+    width: 100px
   }
 }
