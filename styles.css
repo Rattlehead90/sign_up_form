@@ -75,11 +75,6 @@ img + p {
   font-weight: bold;
 }
 
-.form-side {
-  padding: 40px 0px;
-  width: 100%;
-}
-
 img {
   width: 80px;
 }
@@ -91,6 +86,7 @@ img {
   justify-content: flex-start;
   gap: 40px;
   width: 100%;
+  padding: 40px 0px;
 }
 
 .greetings {
