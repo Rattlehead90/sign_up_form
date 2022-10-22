@@ -251,6 +251,7 @@ button {
   letter-spacing: 1px;
   padding: 5px;
   box-shadow: 2px 3px 4px -1px rgba(0, 0, 0, 0.281);
+  transition: all ease-in 0.4s;
 }
 
 button + p {
@@ -259,6 +260,19 @@ button + p {
   letter-spacing: 0.5px;
 }
 
+button:hover {
+  background-color: var(--background-gray);
+  color: var(--form-header-black);
+  transition: all ease-out 0.4s;
+}
+
+button:active {
+  margin-top: 4px;
+}
+
+button:focus {
+  border: 1px dotted var(--input-label-gray);
+}
 p a {
   color: var(--button-green);
   font-weight: 500;
