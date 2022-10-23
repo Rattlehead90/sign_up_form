@@ -29,7 +29,7 @@ main {
   margin: 0;
   background-color: var(--background-gray);
   width: 100vw;
-
+  overflow: hidden;
 }
 
 main {
@@ -89,6 +89,7 @@ img {
   width: 100%;
   padding: 40px 0px;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 .greetings {
@@ -281,47 +282,4 @@ p a {
   flex-direction: column;
   height: 15vh;
   justify-content: space-between;
-}
-
-@media only screen and (max-width: 800px) {
-html,
-body {
-  overflow: scroll;
-}
-
-  input {
-    width: 100px
-  }
-
-  .greetings {
-    line-height: 1em
-  }
-
-  .greetings > p {
-    font-size: 0.9rem;
-    padding: 0;
-    margin: 20px;
-  }
-
-  .footer {
-    flex-direction: row;
-  }
-
-  .form-line {
-    flex-direction: column;
-  }
-
-  .side-hero {
-    width: 100%;
-  }
-
-  .credit {
-    font-size: 0.5em;
-    position: relative;
-    top: 10px;
-    color: rgba(255, 255, 255, 0.637);
-  }
-  main {
-    flex-direction: column;
-  }
 }
