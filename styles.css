@@ -206,7 +206,7 @@ input[type='tel']:placeholder-shown + span {
 
 input[type='tel']:invalid + span::before {
   content: '*Enter the number according to Czech format';
-  position: absolute;
+  position: relative;
   color: var(--input-error-message);
   margin-top: 3px;
   font-size: 0.7rem;
@@ -231,7 +231,7 @@ input[type='password'] {
 }
 
 #conf_password.no_match + span::before {
-  position: absolute;
+  position: relative;
   content: '*Passwords do not match';
   color: var(--input-error-message);
   font-size: 0.7rem;
