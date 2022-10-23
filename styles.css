@@ -193,7 +193,7 @@ input[type='email']:placeholder-shown + span {
 
 input[type='email']:invalid + span::before {
   content: '*Email doesn\'t look right';
-  position: absolute;
+  position: relative;
   color: var(--input-error-message);
   margin-top: 3px;
   font-size: 0.7rem;
