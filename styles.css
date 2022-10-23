@@ -193,7 +193,7 @@ input[type='email']:placeholder-shown + span {
 
 input[type='email']:invalid + span::before {
   content: '*Email doesn\'t look right';
-  position: relative;
+  /* position: relative; */
   color: var(--input-error-message);
   margin-top: 3px;
   font-size: 0.7rem;
@@ -206,7 +206,7 @@ input[type='tel']:placeholder-shown + span {
 
 input[type='tel']:invalid + span::before {
   content: '*Enter the number according to Czech format';
-  position: relative;
+  /* position: relative; */
   color: var(--input-error-message);
   margin-top: 3px;
   font-size: 0.7rem;
